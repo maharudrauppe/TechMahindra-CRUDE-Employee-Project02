@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.rudra.project_employee.EmployeeProject.EmployeeProjectApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 12.469 s <<< FAILURE! - in com.rudra.project_employee.EmployeeProject.EmployeeProjectApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of URL [file:/C:/Users/hp/Desktop/Spring/EmployeeProject/target/classes/data.sql]: insert into employees(id,name,salary,designation)values(1001,'Tara',10000,'London'); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEES" not found; SQL statement:
+insert into employees(id,name,salary,designation)values(1001,'Tara',10000,'London') [42102-210]
+Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: 
+Failed to execute SQL script statement #1 of URL [file:/C:/Users/hp/Desktop/Spring/EmployeeProject/target/classes/data.sql]: insert into employees(id,name,salary,designation)values(1001,'Tara',10000,'London'); nested exception is org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "EMPLOYEES" not found; SQL statement:
+insert into employees(id,name,salary,designation)values(1001,'Tara',10000,'London') [42102-210]
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Table "EMPLOYEES" not found; SQL statement:
+insert into employees(id,name,salary,designation)values(1001,'Tara',10000,'London') [42102-210]
+
